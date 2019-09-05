@@ -2,14 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { ParrentComponent } from './parrent.component';
-import { ChildComponent } from './child.component';
+import { CardComponent } from './card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ParrentComponent,
-    ChildComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
