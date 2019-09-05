@@ -2,12 +2,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { CardComponent } from './card.component';
+import { RoundPipe } from './round.pipe';
+import { LearnPipeComponent } from './learn-pipe/learn-pipe.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CardComponent
+    RoundPipe,
+    LearnPipeComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,5 @@
+<!-- Sử dụng pipe để transform dữ liệu từ dạng thô
+   sang dạng thân thiện hơn để hiển thị cho người dùng xem -->
+<p>{{ birthday | date : "shortTime"}}</p><!-- Sử dụng pipe date với tham số shortTime để transform dữ liệu kiểu Date -->
+<p>{{ person | json | uppercase }}</p><!-- Sử dụng pipe json... Có thể sử dụng các pipe liên tiếp nhau -->
+<p>{{ address | async }}</p><!-- Dùng pipe async để transform dữ liệu kiểu Promise sang kiểu string -->
