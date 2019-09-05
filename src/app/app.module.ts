@@ -1,25 +1,30 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpModule } from '@angular/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { IpComponent } from './ip.component';
-import { IpComponentService } from './ip.component_service';
-import { IpService } from './ip.service';
-import { IpComponentngOnInit } from './ip.component_ngOnInit';
+import { SignInComponent } from './sign-in.component';
+import { SignInComponent2 } from './sign-in.component2';
+import { SignInComponent3 } from './sign-in.component3';
+import { SignInComponent4 } from './sign-in.component4';
+import { SignInComponent5 } from './sign-in.component5';
+import { NgFormComponent } from './ng-form/ng-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    IpComponent,
-    IpComponentService,
-    IpComponentngOnInit
+    SignInComponent,
+    SignInComponent2,
+    SignInComponent3,
+    SignInComponent4,
+    SignInComponent5,
+    NgFormComponent
   ],
   imports: [
     BrowserModule,
-    HttpModule
+    FormsModule
   ],
-  providers: [IpService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
