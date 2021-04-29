@@ -1,13 +1,6 @@
 <p>This is ng-Form</p>
 <form (ngSubmit)="onSubmit(formSignIn)" #formSignIn="ngForm">
-  <input
-        placeholder="Email"
-        ngModel
-        #txtEmail="ngModel"
-        name="email"
-        required
-        email
-  />
+  <input placeholder="Email" ngModel #txtEmail="ngModel" name="email" required email />
   <p class="error" *ngIf="txtEmail.touched && txtEmail.errors?.required">
     Email is required
   </p>
@@ -16,17 +9,10 @@
   </p>
 
   <br /><br />
-  <input
-        type="password"
-        placeholder="Password"
-        ngModel
-        name="password"
-        minlength="6"
-        #txtPassword="ngModel"
-        pattern="[a-z]*"
-  />
+  <input type="password" placeholder="Password" ngModel name="password" minlength="6" #txtPassword="ngModel"
+    pattern="[a-z]*" />
   <br />
-  <div ngModelGroup="subject">
+  <div ngModelGroup="subjects">
     <label> NodeJS<input type="checkbox" [ngModel]="false" name="NodeJS" /></label>
     <label> Angular<input type="checkbox" [ngModel]="false" name="Angular" /></label>
     <label> ReactJS<input type="checkbox" [ngModel]="false" name="ReactJS" /></label>

@@ -6,12 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ng-form.component.css']
 })
 export class NgFormComponent implements OnInit {
-  constructor() {}
-  
-  ngOnInit() {}
+  constructor() { }
+
+  ngOnInit() { }
+
   onSubmit(formSignIn) {
     console.log(formSignIn);
-    console.log(formSignIn.value.subject);
+    console.log(formSignIn.value.subjects);
     throw new Error("Form is invalid!");
   }
 }

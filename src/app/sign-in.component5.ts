@@ -23,6 +23,6 @@ import { Component } from '@angular/core';
 export class SignInComponent5 {
     onSubmit(SignInForm) {
         console.log(SignInForm);
-        throw new Error("Form is invalid!")
+        // throw new Error("Form is invalid!")
     }
 }
