@@ -5,13 +5,13 @@ import { HttpModule } from "@angular/http";
 
 import { AppComponent } from './app.component';
 import { NgFormComponent } from './ng-form/ng-form.component';
-import { NgFormComponentServer } from './ng-form/ng-form.component_server';
+import { NgFormComponentService } from './ng-form/ng-form.componentService';
 
 @NgModule({
   declarations: [
     AppComponent,
     NgFormComponent,
-    NgFormComponentServer
+    NgFormComponentService
   ],
   imports: [
     BrowserModule,

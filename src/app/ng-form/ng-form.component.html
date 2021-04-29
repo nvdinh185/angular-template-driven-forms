@@ -9,8 +9,8 @@
   </p>
 
   <br /><br />
-  <input type="password" placeholder="Password" ngModel name="password" minlength="6" #txtPassword="ngModel"
-    pattern="[a-z]*" />
+  <input type="password" placeholder="Password" ngModel name="password" minlength="3" #txtPassword="ngModel"
+    pattern="[1-9]*" />
   <br />
   <div ngModelGroup="subject">
     <label> NodeJS<input type="checkbox" [ngModel]="false" name="NodeJS" /></label>
@@ -18,7 +18,7 @@
     <label> ReactJS<input type="checkbox" [ngModel]="false" name="ReactJS" /></label>
   </div>
   <br />
-  <button>Submit</button>
+  <button [disabled]="formSignIn.invalid">Submit</button>
 </form>
 <button (click)="postToExpress()">POST</button>
 <p>{{ txtEmail.errors | json }}</p>

@@ -12,24 +12,24 @@ app.use((req, res, next) => {
 
 app.get('/', (req, res) => res.send("Hello"));
 app.get('/*', (req, res) => {
-    fs.readFile(__dirname + req.url, { encoding: 'utf-8', flag: 'r' }, 
-		function (error, data) {
-			if (!error) {
-				res.writeHead(200, { 'Access-Control-Allow-Origin': '*' });
-				res.end(data);
-			} else {
-				res.writeHead(404, { 'Access-Control-Allow-Origin': '*' });
-				res.end(JSON.stringify(error));
+    fs.readFile(__dirname + req.url, { encoding: 'utf-8', flag: 'r' },
+        function (error, data) {
+            if (!error) {
+                res.writeHead(200, { 'Access-Control-Allow-Origin': '*' });
+                res.end(data);
+            } else {
+                res.writeHead(404, { 'Access-Control-Allow-Origin': '*' });
+                res.end(JSON.stringify(error));
             }
-		});
+        });
 });
 
 app.post('/signin', jsonParser, (req, res) => {
-    if (req.body.username == "dinh" && req.body.password == "1234")
+    if (req.body.username == "nvdinh123@gmail.com" && req.body.password == "123")
         res.send({ status: "ok", message: "login thanh cong!" });
     else
         res.send({ status: "nok", message: "login that bai!" });
-        //res.send(req.body.name);
+    //res.send(req.body.name);
 })
 
 app.listen(3000, () => console.log("Server is running!"));
